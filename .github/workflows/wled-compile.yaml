@@ -31,7 +31,7 @@ jobs:
         npm install
         echo '[env:custom_build]' >>platformio.ini
         echo 'extends = env:esp32c3mini_dio_4MB_M' >>platformio.ini
-        echo 'build_flags = ${env:esp32c3mini_dio_4MB_M.build_flags} -D USERMOD_AUTO_SAVE -D USERMOD_BATTERY' >>platformio.ini
+        echo 'build_flags = ${env:esp32c3mini_dio_4MB_M.build_flags} -D USERMOD_AUTO_SAVE' >>platformio.ini
         
         echo 'build_unflags= -D WLED_RELEASE_NAME' >>platformio.ini
         pio run -e custom_build || pio run -e custom_build
